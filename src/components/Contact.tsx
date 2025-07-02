@@ -200,7 +200,7 @@ export const Contact: React.FC = () => {
               ))}
             </div>
 
-            {/* Social Links */}
+           /* { Social Links }
             <div>
               <h4 className="text-white font-medium mb-4">Connect on Social</h4>
               <div className="flex space-x-4">
@@ -217,8 +217,8 @@ export const Contact: React.FC = () => {
                   </a>
                 ))}
               </div>
-            </div>
-
+            </div> */
+			
             {/* Status Links */}
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600/20">
               <h4 className="text-white font-medium mb-4">System Status</h4>
