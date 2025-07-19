@@ -1,0 +1,42 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Explore Domi Adiwijaya's portfolio, tech insights, and innovative projects by a professional Tech & HomeLab Enthusiast." } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://raw.githubusercontent.com/Elcapitanoe/DA-Portfolio/master/images/da-logo-circle.png" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="author" content="Domi Adiwijaya" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Elcapitanoe/DA-Portfolio/master/images/da-logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Elcapitanoe/DA-Portfolio/master/images/da-logo.png" />
+    <meta name="twitter:creator" content="@domiadiwijaya" />
+
+    <link rel="canonical" href={canonicalURL} />
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen bg-slate-900 text-white">
+    <slot />
+  </body>
+</html>
