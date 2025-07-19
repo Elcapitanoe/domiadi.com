@@ -1,0 +1,116 @@
+---
+const highlights = [
+  {
+    title: 'Tech Innovation',
+    description: 'I love exploring new technologies and finding creative ways to solve problems that actually matter.',
+    icon: 'code'
+  },
+  {
+    title: 'HomeLab Magic',
+    description: 'My home lab is where I test, break, and perfect everything before it goes into production.',
+    icon: 'server'
+  },
+  {
+    title: 'Automation Obsessed',
+    description: 'If I have to do something more than twice, I probably write a script to do it for me.',
+    icon: 'zap'
+  },
+  {
+    title: 'Knowledge Sharing',
+    description: 'I believe the best way to learn is to teach, so I share what I discover along the way.',
+    icon: 'heart'
+  }
+];
+---
+
+<section id="about" class="py-20 bg-slate-800/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-white mb-4">
+        What I am <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">About</span>
+      </h2>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+        I am someone who gets excited about making technology work better, whether it is in my home lab or helping others solve their tech challenges.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+      <div class="space-y-6">
+        <p class="text-lg text-slate-300 leading-relaxed">
+          Hey there! I am Domi, and I have been tinkering with technology for as long as I can remember. 
+          What started as curiosity about how things work has turned into a career of building systems 
+          that actually solve real problems.
+        </p>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          My home lab is where the magic happens – it is my playground for testing new ideas and learning 
+          technologies before they hit the mainstream. I believe the best way to understand something is 
+          to break it, fix it, and make it better.
+        </p>
+        <p class="text-lg text-slate-300 leading-relaxed">
+          When I am not deep in server configurations or automation scripts, I enjoy sharing what I have learned 
+          and helping others navigate their own tech journeys. There is nothing quite like that moment when 
+          everything clicks and just works.
+        </p>
+      </div>
+      
+      <div class="relative">
+        <div class="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/20">
+          <h3 class="text-2xl font-semibold text-white mb-6">In a nutshell</h3>
+          <ul class="space-y-3 text-slate-300">
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-blue-400 rounded-full"></div>
+              <span>HomeLab tinkerer & problem solver</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-purple-400 rounded-full"></div>
+              <span>Automation enthusiast</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-green-400 rounded-full"></div>
+              <span>Open source contributor</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+              <span>Always learning something new</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {highlights.map((highlight) => (
+        <div class="bg-slate-800/30 p-6 rounded-2xl backdrop-blur-sm border border-slate-700/20 hover:border-slate-600/40 group">
+          <div class="mb-4">
+            {highlight.icon === 'code' && (
+              <svg class="w-8 h-8 text-blue-400 group-hover:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            )}
+            {highlight.icon === 'server' && (
+              <svg class="w-8 h-8 text-blue-400 group-hover:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+              </svg>
+            )}
+            {highlight.icon === 'zap' && (
+              <svg class="w-8 h-8 text-blue-400 group-hover:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            )}
+            {highlight.icon === 'heart' && (
+              <svg class="w-8 h-8 text-blue-400 group-hover:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+            )}
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-blue-400">
+            {highlight.title}
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            {highlight.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

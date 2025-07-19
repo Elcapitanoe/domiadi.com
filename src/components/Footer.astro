@@ -1,0 +1,29 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-slate-900 border-t border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <!-- Copyright -->
+      <div class="text-sm text-slate-400">
+        © {currentYear} Domi Adiwijaya. All rights reserved.
+      </div>
+      
+      <!-- Built with -->
+      <div class="flex items-center space-x-4 text-sm text-slate-400">
+        <span>Built with</span>
+        <div class="flex items-center space-x-3">
+          <span class="flex items-center space-x-1">
+            <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+            <span>Astro</span>
+          </span>
+          <span class="flex items-center space-x-1">
+            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <span>Tailwind</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
