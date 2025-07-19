@@ -1,2 +1,2 @@
 # Personal Portfolio
-> <a href="https://porto2.domiadi.com">www.domiadi.com</a>
+> <a href="https://porto2.domiadi.com">porto2.domiadi.com</a>
