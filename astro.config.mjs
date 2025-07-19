@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  base: '/',
+  base: '/domiadi.com/',
   site: 'https://elcapitanoe.github.io',
   integrations: [tailwind()],
   build: {
